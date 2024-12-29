@@ -104,3 +104,39 @@ footer {
     color: #fff;
     margin-top: 2rem;
 }
+
+/* Events Section */
+#events {
+    padding: 40px 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#events h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+video {
+    width: 100%;
+    max-width: 720px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.video-container p {
+    margin-top: 10px;
+    font-size: 1rem;
+    text-align: center;
+    color: #555;
+}
