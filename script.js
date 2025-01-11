@@ -45,7 +45,9 @@ document.querySelectorAll('nav a').forEach(anchor => {
         });
     });
 });
-
+document.querySelector('.menu-toggle').addEventListener('click', () => {
+    document.querySelector('.nav-links').classList.toggle('show');
+});
 // Contact form validation
 document.querySelector('form').addEventListener('submit', function(e) {
     const email = document.querySelector('#email').value;
