@@ -37,12 +37,19 @@ function convertMarkdownToHTML(markdown) {
 // Load blog posts on page load
 document.addEventListener('DOMContentLoaded', fetchBlogPosts);
 // Smooth scrolling
+// Smooth scrolling with fallback for external links
 document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        const targetElement = document.querySelector(this.getAttribute('href'));
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth'
+            });
+        } else {
+            // If the target section doesn't exist, navigate to the link's href
+            window.location.href = this.getAttribute('href');
+        }
     });
 });
 document.querySelector('.menu-toggle').addEventListener('click', () => {
