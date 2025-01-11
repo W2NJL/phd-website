@@ -26,7 +26,7 @@ function convertMarkdownToHTML(markdown) {
     const content = markdown.split('---')[2];
 
     return `
-        <div class="blog-post">
+        <div class="blog-posts">
             <h3>${titleMatch ? titleMatch[1] : 'Untitled'}</h3>
             <p class="blog-date">${dateMatch ? dateMatch[1] : ''}</p>
             <p>${content}</p>
