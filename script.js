@@ -55,12 +55,10 @@ document.querySelectorAll('nav a').forEach(anchor => {
 document.querySelector('.menu-toggle').addEventListener('click', () => {
     document.querySelector('.nav-links').classList.toggle('show');
 });
-// Contact form validation
-document.querySelector('form').addEventListener('submit', function(e) {
-    const email = document.querySelector('#email').value;
-    if (!email.includes('@')) {
-        e.preventDefault();
-        alert('Please enter a valid email.');
-    }
-});
 
+// Hide menu after clicking a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.remove('show');
+    });
+});
