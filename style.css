@@ -165,3 +165,49 @@ video {
     text-align: center;
     color: #555;
 }
+
+#new-post {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#new-post form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#new-post label {
+    font-weight: bold;
+}
+
+#new-post input,
+#new-post textarea,
+#new-post button {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#new-post button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#new-post button:hover {
+    background: #0056b3;
+}
+
+#markdown-output {
+    background: #eee;
+    padding: 1rem;
+    border-radius: 4px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
